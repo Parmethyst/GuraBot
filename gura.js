@@ -12,14 +12,17 @@ const fs = require('fs');
 const prefix = "a!";
 const interactionCooldown = 50;
 var   lastInteraction = 0;
-var today = new Date();
-var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-var dateTime = date+' '+time;
+
 const client = new Discord.Client();
 client.on("message", function(message) {
 	if(message.author.bot) return;
-	
+
+	// Timestamp purposes for logging
+	var today = new Date();
+	var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+	var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+	var dateTime = date+' '+time;
+
 	lastInteraction ++;
 	
 	if(lastInteraction >= interactionCooldown){
