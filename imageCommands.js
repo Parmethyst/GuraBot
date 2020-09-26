@@ -13,7 +13,7 @@ exports.booru = function() {
 		let result='';
 		let slicedData='';
 		//let pageNumber=Math.floor(Math.random() * 10);
-		let offset=Math.floor(Math.random() * 10);
+		let offset=Math.floor(Math.random() * 30);
 		https.get('https://safebooru.org/index.php?page=dapi&s=post&q=index&tags=gawr_gura&json=1&limit=30', (resp) => {
 			// A chunk of data has been recieved.
 			resp.on('data', (chunk) => {
