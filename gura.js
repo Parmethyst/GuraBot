@@ -62,7 +62,24 @@ client.on("message", function(message) {
 					console.log("["+dateTime+"] GF: " + strText);
 				}); 	
 				break;
-
+		case "guraclip":	
+			case "gc": 	
+				var strText=_text.clips();
+				message.channel.send(strText); 
+				fs.appendFile('logs.txt',"["+dateTime+"] GC: " + strText +'\n', function (err) {
+					if (err) throw err;
+					console.log("["+dateTime+"] GC: " + strText);
+				});
+				break;
+		// case "gurabooru":	
+		// 	case "gb": 	
+		// 		var strText=_image.booru();
+		// 		message.channel.send(strText); 
+		// 		fs.appendFile('logs.txt',"["+dateTime+"] GB: " + strText +'\n', function (err) {
+		// 			if (err) throw err;
+		// 			console.log("["+dateTime+"] GB: " + strText);
+		// 		});
+		// 		break;
 		case "gurapics": 	case "gp": 	message.channel.send({files: [{attachment: _image.gura(), size: 4096}]}); break;
 		//case "getstream": case "gs":
 		//case "test": 		_youtube.test(message); break;
