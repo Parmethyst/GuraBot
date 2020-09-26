@@ -38,10 +38,26 @@ const facts = [
 	"Our oceans cover more than 70 per cent of the Earth’s surface."
 	];
 
+const clips = [
+	"https://www.youtube.com/watch?v=WIwk-B-LfHI",
+	"https://www.youtube.com/watch?v=uydZpb_F7So",
+	"https://www.youtube.com/watch?v=4jOmvTsWqGs",
+	"https://www.youtube.com/watch?v=O4cOrgLoCoo",
+	"https://www.youtube.com/watch?v=7U6eHY1M9WM",
+	"https://www.youtube.com/watch?v=tHGBhz_D4M0",
+	"https://www.youtube.com/watch?v=pqTSvylD550",
+	"https://www.youtube.com/watch?v=5U6huL4tV0Y",
+	"https://www.youtube.com/watch?v=Re0PLIAVKP4",
+	"https://www.youtube.com/watch?v=7KyMzX4KqEs"
+];
 exports.gura = function(){
 	return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
 exports.facts = function(){
 	return facts[Math.floor(Math.random() * facts.length)];
+}
+
+exports.clips = function(){
+	return clips[Math.floor(Math.random() * clips.length)];
 }
