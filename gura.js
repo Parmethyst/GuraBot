@@ -71,15 +71,18 @@ client.on("message", function(message) {
 					console.log("["+dateTime+"] GC: " + strText);
 				});
 				break;
-		// case "gurabooru":	
-		// 	case "gb": 	
-		// 		var strText=_image.booru();
-		// 		message.channel.send(strText); 
-		// 		fs.appendFile('logs.txt',"["+dateTime+"] GB: " + strText +'\n', function (err) {
-		// 			if (err) throw err;
-		// 			console.log("["+dateTime+"] GB: " + strText);
-		// 		});
-		// 		break;
+		case "gurabooru":	
+			case "gb": 	
+				_image.booru().then(response=>{
+					console.log(response);
+					var strText = "https://safebooru.org/images/" + response.directory + "/" + response.image;
+					message.channel.send(strText);
+					fs.appendFile('logs.txt',"["+dateTime+"] GB: " + strText +'\n', function (err) {
+						if (err) throw err;
+						console.log("["+dateTime+"] GB: " + strText);
+					});
+				}).catch(error=>{ console.log(error); });
+				break;
 		case "gurapics": 	case "gp": 	message.channel.send({files: [{attachment: _image.gura(), size: 4096}]}); break;
 		//case "getstream": case "gs":
 		//case "test": 		_youtube.test(message); break;
