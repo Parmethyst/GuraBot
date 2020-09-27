@@ -3,9 +3,11 @@ const Discord = require('discord.js');
 const sfx = [
 	"a.mp3",
 	"lewdshark.mp3",
+	"loveprofessing.mp3",
 	"morning.mp3",
 	"ruwinning.mp3",
 	"sadshark.mp3",
+	"shaak.mp3",
 	"shrimp.mp3"
 	];
 
@@ -23,10 +25,12 @@ exports.gura = async function(message, arg, command){
 				.setTitle(`What do you want me to say?`)
 				.setDescription(`	${command} a
 									${command} lewdshark
+									${command} loveprofessing
 									${command} morning
 									${command} areyouwinning
 									${command} sadshark
 									${command} shrimp
+									${command} shaak
 									${command} random`)
 			return message.channel.send(help_msg);
 		}
@@ -36,10 +40,12 @@ exports.gura = async function(message, arg, command){
 		switch(arg){
 			case "a": 				dispatcher = connection.play(`./sfx/a.mp3`); break;
 			case "lewdshark": 		dispatcher = connection.play(`./sfx/lewdshark.mp3`); break;
-			case "morning": 		dispatcher = connection.play(`./sfx/morning.mp3`); break;
+			case "lewdshark": 		dispatcher = connection.play(`./sfx/lewdshark.mp3`); break;
+			case "loveprofessing": 	dispatcher = connection.play(`./sfx/loveprofessing.mp3`); break;
 			case "areyouwinning": 	dispatcher = connection.play(`./sfx/ruwinning.mp3`); break;
 			case "sadshark": 		dispatcher = connection.play(`./sfx/sadshark.mp3`); break;
 			case "shrimp": 			dispatcher = connection.play(`./sfx/shrimp.mp3`); break;
+			case "shaak": 			dispatcher = connection.play(`./sfx/shaak.mp3`); break;
 			default: 				dispatcher = connection.play(`./sfx/${sfx[Math.floor(Math.random() * sfx.length)]}`);
 		}
 		
