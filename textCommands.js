@@ -50,6 +50,7 @@ const clips = [
 	"https://www.youtube.com/watch?v=Re0PLIAVKP4",
 	"https://www.youtube.com/watch?v=7KyMzX4KqEs"
 ];
+
 exports.gura = function(){
 	return quotes[Math.floor(Math.random() * quotes.length)];
 }

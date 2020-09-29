@@ -9,10 +9,13 @@ exports.help = function(prefix){
 		.setTitle(`GuraBot Helper!`)
 		.setDescription(`This bot was made by a humble shrimp. Please support Gawr Gura!`)
 		.addField(	`Commands`, `
-					${prefix}TextGura 	(${prefix}tg): Reply you with an iconic Gura quote;
-					${prefix}AudioGura 	(${prefix}ag): Gura joins the vc, she has something to say;
+					${prefix}GuraText 	(${prefix}gt): Reply you with an iconic Gura quote;
+					${prefix}GuraAudio 	(${prefix}ga): Gura joins the vc, she has something to say;
 					${prefix}GuraFacts	(${prefix}gf): Are you ready for some random ocean facts?;
-					${prefix}GuraPics	(${prefix}gp): Cute pics of best shork;`)
+					${prefix}GuraClip	(${prefix}gc): Have fun with one of Gura's best moments;
+					${prefix}GuraPics	(${prefix}gp): Cute pics of best shork;
+					${prefix}GuraBooru	(${prefix}gb): Retrieved more pics from safebooru!;
+					${prefix}SetChannel	(${prefix}sc): Set this channel to receive notifications;
+					${prefix}NextLive	(${prefix}nl): Get info on Gura's next livestream!;`)
 	return help_msg;
 }
-
